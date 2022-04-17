@@ -1,0 +1,21 @@
+.form{
+    background-color:#6d99df;
+    width: 100%;
+    height: 700px;
+}
+.form-container input {
+    border:none;
+    border-bottom: 1px solid lightgrey;
+}
+.login-form{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top:50px;
+    align-items: center;
+}
+.loginImage img{
+    width: 500px;
+}
+.loginDetails{
+    margin-top:100px
+}
