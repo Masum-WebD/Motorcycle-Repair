@@ -1,12 +1,33 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
 import img from "../../../image/Login/login.jpg";
 import SocialMedia from "../../SocialMedia/SocialMedia";
 import "./Login.css";
 
 const Login = () => {
     const navigate =useNavigate()
+
+    const [
+      signInWithEmailAndPassword,
+      user,
+      loading,
+      error,
+    ] = useSignInWithEmailAndPassword(auth);
+    if(user) {
+      navigate('/home')
+    }
+
+    const handleEmailAndPassword=(e)=>{
+      e.preventDefault()
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+      signInWithEmailAndPassword(email, password)
+      // console.log(email,password);
+    }
+
 
     const handleReg=()=>{
       navigate('/register')
@@ -19,14 +40,14 @@ const Login = () => {
           <img src={img} alt="" />
         </div>
         <div className="loginDetails">
-          <Form className="form-container">
+          <Form onSubmit={handleEmailAndPassword} className="form-container">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label className='fw-bold'>Email address</Form.Label>
-              <Form.Control type="email" required />
+              <Form.Control name='email' type="email" required />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label className='fw-bold'>Password</Form.Label>
-              <Form.Control type="password" required />
+              <Form.Control name='password'type="password" required />
             </Form.Group>
             <Button
               className="w-50 d-block mx-auto fs-4 fw-bold"
