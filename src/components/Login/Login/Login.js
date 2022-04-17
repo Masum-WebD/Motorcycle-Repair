@@ -1,9 +1,15 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../../../image/Login/login.jpg";
 import "./Login.css";
 
 const Login = () => {
+    const navigate =useNavigate()
+
+    const handleReg=()=>{
+      navigate('/register')
+    }
   return (
     <div className="form ">
       <h1 className="text-center text-black ">Please login</h1>
@@ -29,6 +35,7 @@ const Login = () => {
               Login
             </Button>
           </Form>
+          <p className='text-center'>New to Genius car? <Link to='/register' onClick={handleReg} className='text-danger text-decoration-none pe-auto'>Please Register</Link></p>
         </div>
       </div>
     </div>
