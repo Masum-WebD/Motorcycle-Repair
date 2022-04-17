@@ -1,0 +1,8 @@
+.service{
+    margin-right:50px ;
+    text-align:center;
+    border:1px solid lightgrey; 
+    border-radius: 10px;
+    height:100%;
+    padding:5px
+}
