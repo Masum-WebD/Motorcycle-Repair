@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { Link , useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import img from '../../../image/Login/register.jpg'
 import SocialMedia from '../../SocialMedia/SocialMedia';
 const Register = () => {
     const navigate =useNavigate()
+    
 
     const [
       createUserWithEmailAndPassword,
@@ -14,17 +15,22 @@ const Register = () => {
       loading,
       error,
     ] = useCreateUserWithEmailAndPassword(auth);
-    const handleCreateUser=e=>{
+
+    const [sendEmailVerification, sending, error1] = useSendEmailVerification(auth);
+
+    const handleCreateUser=async (e)=>{
       e.preventDefault();
       const name =e.target.name.value
       const email = e.target.email.value;
       const password = e.target.password.value;
-      createUserWithEmailAndPassword(email,password)
+      await createUserWithEmailAndPassword(email,password)
+      await sendEmailVerification(email);
+          alert('Sent email');
+          navigate('/home')
     }
 
     const handleLog=() => {
         navigate('/login')
-        console.log('click');
     }
     return (
         <div className="form ">
@@ -52,7 +58,7 @@ const Register = () => {
               variant="primary"
               type="submit"
             >
-              Login
+              Register
             </Button>
           </Form>
           <p className='text-center'>Already have a Account? <Link to='/login' onClick={handleLog} className='text-danger text-decoration-none pe-auto'>Login</Link></p>

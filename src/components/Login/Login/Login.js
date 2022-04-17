@@ -25,6 +25,10 @@ const Login = () => {
     if(loading) {
       <Loading></Loading>
     }
+    let errorMessage
+    if(error) {
+      errorMessage =<p style={{color:'red'}}>{error.message}</p>
+    }
 
     const handleEmailAndPassword=(e)=>{
       e.preventDefault()
@@ -55,6 +59,7 @@ const Login = () => {
               <Form.Label className='fw-bold'>Password</Form.Label>
               <Form.Control name='password'type="password" required />
             </Form.Group>
+            {errorMessage}
             <Button
               className="w-50 d-block mx-auto fs-4 fw-bold"
               variant="primary"
