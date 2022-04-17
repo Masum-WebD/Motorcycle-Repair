@@ -7,3 +7,10 @@
     
 
 }
+@media screen and  (max-width:576px) {
+    .service-container{
+        grid-template-columns: repeat(1,1fr);
+        width:80%;
+        height:80%;
+    }
+}

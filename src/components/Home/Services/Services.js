@@ -33,7 +33,7 @@ const Services = () => {
     },
   ];
   return (
-    <div>
+    <div id='services'>
       <h1 className="text-primary mt-3 text-center">Our services</h1>
      <div className='service-container'>
      {
