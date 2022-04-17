@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link , useNavigate } from 'react-router-dom';
 import img from '../../../image/Login/register.jpg'
+import SocialMedia from '../../SocialMedia/SocialMedia';
 const Register = () => {
     const navigate =useNavigate()
     const handleLog=() => {
@@ -17,6 +18,10 @@ const Register = () => {
         </div>
         <div className="loginDetails">
           <Form className="form-container">
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label className='fw-bold'>Your Name</Form.Label>
+              <Form.Control type="text"/>
+            </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label className='fw-bold'>Email address</Form.Label>
               <Form.Control type="email" required />
@@ -34,6 +39,7 @@ const Register = () => {
             </Button>
           </Form>
           <p className='text-center'>Already have a Account? <Link to='/login' onClick={handleLog} className='text-danger text-decoration-none pe-auto'>Login</Link></p>
+          <SocialMedia></SocialMedia>
         </div>
       </div>
     </div>

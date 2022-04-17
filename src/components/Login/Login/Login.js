@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import img from "../../../image/Login/login.jpg";
+import SocialMedia from "../../SocialMedia/SocialMedia";
 import "./Login.css";
 
 const Login = () => {
@@ -36,8 +37,11 @@ const Login = () => {
             </Button>
           </Form>
           <p className='text-center'>New to Genius car? <Link to='/register' onClick={handleReg} className='text-danger text-decoration-none pe-auto'>Please Register</Link></p>
+          <SocialMedia></SocialMedia>
         </div>
+        
       </div>
+      
     </div>
   );
 };
