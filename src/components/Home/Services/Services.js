@@ -20,7 +20,7 @@ const Services = () => {
       name: "Motorcycle repair",
       description:
         "Our all services is supper.This service is Engine recover, if your bike engine not popper working then doing engine servicing . We are repair the engine efficiently.",
-      price: 4500,
+      price: 10000,
       img: motorbike,
     },
     {
@@ -28,7 +28,7 @@ const Services = () => {
       name: "Bike washing",
       description:
         "Our all services is supper.This service is Engine recover, if your bike engine not popper working then doing engine servicing . We are repair the engine efficiently.",
-      price: 4500,
+      price: 4000,
       img:washing,
     },
   ];

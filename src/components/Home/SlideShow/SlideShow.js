@@ -17,8 +17,8 @@ const SlideShow = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Repairing most of</h3>
+            <p>This motorbike repair experience is good</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -30,8 +30,8 @@ const SlideShow = () => {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>When i am working my center</h3>
+            <p>This time i am working my center</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -43,9 +43,9 @@ const SlideShow = () => {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>Another working time others shop</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+             When i am  working others shop
             </p>
           </Carousel.Caption>
         </Carousel.Item>

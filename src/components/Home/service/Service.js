@@ -8,10 +8,10 @@ const Service = ({service}) => {
         <div className=' all-service' >
            <div className=' service'>
            <img src={img} alt="" />
-            <h3>Name:{name}</h3>
-            <p>Price:৳{price}</p>
+            <h3>{name}</h3>
             <p>{description}</p>
-            <Link to='/checkout' className='btn btn-link btn-primary text-white text-decoration-none fs-bold p-2'>Pick the service</Link>
+            <p className='fw-bold'>Price:৳{price}</p>
+            <Link to='/checkout' className='btn btn-link btn-primary text-white text-decoration-none fs-bold p-2'>Pick up service</Link>
            </div>
         </div>
     );
