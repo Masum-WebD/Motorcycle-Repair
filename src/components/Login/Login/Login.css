@@ -13,6 +13,18 @@
     margin-top:50px;
     align-items: center;
 }
+@media (max-width:576px){
+    .login-form{
+        grid-template-columns:repeat(1,1fr);
+        width:200px;
+        height:100px;
+        /* margin:200px; */
+        margin-bottom:300px
+    }
+    .login-form .image{
+        width:50%;
+    }
+}
 .loginImage img{
     width: 500px;
 }

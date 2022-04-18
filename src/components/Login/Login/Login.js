@@ -61,11 +61,11 @@ const Login = () => {
   return (
     <div className="form ">
       <h1 className="text-center text-black ">Please login</h1>
-      <div className="login-form container">
-        <div className="loginImage">
-          <img src={img} alt="" />
+      <div className=" login-form container">
+        <div className=" loginImage">
+          <img className='image' src={img} alt="" />
         </div>
-        <div className="loginDetails">
+        <div className=" image loginDetails">
           <Form onSubmit={handleEmailAndPassword} className="form-container">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label className='fw-bold'>Email address</Form.Label>
@@ -84,7 +84,7 @@ const Login = () => {
               Login
             </Button>
           </Form>
-          <p className='text-center'>New to Genius car? <Link to='/register' onClick={handleReg} className='text-danger text-decoration-none pe-auto'>Please Register</Link></p>
+          <p className='text-center'>New to Motorcycle repair? <Link to='/register' onClick={handleReg} className='text-danger text-decoration-none pe-auto'>Please Register</Link></p>
           <p className='text-center'>Forget Password? <button  onClick={notify} className=' btn btn-link text-danger text-decoration-none pe-auto'>Reset password</button></p>
           <SocialMedia></SocialMedia>
         </div>

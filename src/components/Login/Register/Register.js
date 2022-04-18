@@ -34,12 +34,12 @@ const Register = () => {
   return (
     <div className="form ">
       <h1 className="text-center text-black ">Please Register</h1>
-      <div className="login-form container">
+      <div className=" login-form container">
         <div className="loginImage me-3">
-          <img src={img} alt="" />
+          <img  className='image' src={img} alt="" />
         </div>
-        <div className="loginDetails">
-          <Form onSubmit={handleCreateUser} className="form-container">
+        <div className=" loginDetails">
+          <Form  onSubmit={handleCreateUser} className=" image form-container">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label className="fw-bold">Your Name</Form.Label>
               <Form.Control name="name" type="text" />
@@ -67,7 +67,7 @@ const Register = () => {
               Register
             </Button>
           </Form>
-          <p className="text-center">
+          <p className="text-center image">
             Already have a Account?{" "}
             <Link
               to="/login"
