@@ -16,14 +16,16 @@
 @media (max-width:576px){
     .login-form{
         grid-template-columns:repeat(1,1fr);
-        width:200px;
-        height:100px;
+        width:50%;
+        height:50%;
         /* margin:200px; */
         margin-bottom:300px
     }
     .login-form .image{
         width:50%;
+        height:50%;
     }
+
 }
 .loginImage img{
     width: 500px;
