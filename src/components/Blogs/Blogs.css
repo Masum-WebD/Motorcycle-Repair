@@ -1,9 +1,10 @@
 .blog-container{
-    background-color: #acb0b8;
-    height:100%
+    /* background-color: #acb0b8; */
+    height:600px
 
 }
 .blogs{
     width: 80%;
+    margin-top:20px;
     border:1px solid lightcoral    
 }
